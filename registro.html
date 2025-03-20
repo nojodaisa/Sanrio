@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanrio Star ✩</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="back-btn-container">
+        <a href="inicosesion.html" class="circular-button">
+            <img src="img/j.webp" alt="Botón circular">
+        </a>
+    </div>
+
+    <div class="register-container">
+        <h1>Registro</h1>
+        <form action="registro.php" method="POST" class="register-form">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required>
+
+            <label for="password-reg">Contraseña:</label>
+            <input type="password" id="password-reg" name="password" placeholder="Cree una contraseña" required>
+
+            <label for="password-reg-confirm">Confirmar contraseña:</label>
+            <input type="password" id="password-reg-confirm" name="password-confirm" placeholder="Confirme su contraseña" required>
+
+            <button type="submit" class="btn-register-submit">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>

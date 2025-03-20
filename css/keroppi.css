@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D6F5D6; /* Verde claro pastel */
+    color: #2E6B2F; /* Verde oscuro para el texto */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #76C443; /* Verde más intenso */
+    color: #FFFFFF; /* Blanco para el texto */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    background-color: #D6F5D6; /* Verde claro pastel */
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #2E6B2F; /* Verde oscuro */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: #76C443; /* Verde más intenso al pasar el cursor */
+}
+
+.circular-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: #f4f4f4; /* Fondo del botón */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para efecto 3D */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .circular-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen dentro del círculo */
+  }
+  
+  .circular-button:hover {
+    transform: scale(1.1); /* Efecto de hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
+  }
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    background-color: #FFFFFF; /* Blanco */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #76C443; /* Verde más intenso en el borde de la imagen */
+}
+
+.product h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #76C443; /* Verde más intenso */
+}
+
+.product p {
+    font-size: 1.1em;
+    color: #2E6B2F; /* Verde oscuro */
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.3em;
+    color: #76C443; /* Precio en verde más intenso */
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #76C443; /* Verde más intenso */
+    color: #FFFFFF; /* Blanco para el texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.button:hover {
+    background-color: #D6F5D6; /* Verde claro pastel en hover */
+    color: #2E6B2F; /* Verde oscuro en hover */
+}
+
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.back-btn a {
+    text-decoration: none;
+    color: #FFFFFF; /* Blanco */
+    background-color: #2E6B2F; /* Verde oscuro */
+    border: 2px solid #D6F5D6; /* Borde verde claro pastel */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.back-btn a:hover {
+    background-color: #D6F5D6; /* Cambio de fondo verde claro pastel al pasar el ratón */
+    color: #2E6B2F; /* Cambio de color de texto al pasar el ratón */
+}
+
+footer {
+    background-color: #76C443; /* Verde más intenso */
+    color: #FFFFFF; /* Blanco */
+    padding: 20px;
+    text-align: center;
+}

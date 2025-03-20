@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="icon" href="img/s.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanrio Star ✩</title>
+    <link rel="stylesheet" href="css/carrito.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="circular-button">
+        <img src="img/j.webp" alt="Botón circular">
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="productos.html">Productos</a></li>
+        </ul>
+      </nav>
+      <form class="search-bar" action="#" method="GET">
+        <input type="text" name="q" placeholder="Buscar productos..." />
+        <button type="submit">🔍</button>
+      </form>
+
+      <div class="actions">
+        <div class="login">
+          <a href="inicosesion.html" class="btn">Iniciar sesión</a>
+        </div>
+      </div>
+    </header>
+    
+    <section id="carrito" class="carrito">
+      <h2>Tu carrito de compras</h2>
+    
+      <div id="cart-items" class="cart-items">
+      </div>
+    </section>
+    
+    <script>
+      function displayCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartItems = document.getElementById('cart-items');
+
+  cartItems.innerHTML = '';
+  let subtotal = 0;
+
+  cart.forEach((product, index) => {
+    const cartItem = `
+      <div class="cart-item">
+        <img src="${product.image}" alt="${product.title}" class="cart-item-img">
+        <div class="cart-item-details">
+          <h4>${product.title}</h4>
+          <p>Precio: $${product.price.toLocaleString()}</p>
+          <label for="quantity-${index}">Cantidad:</label>
+          <input type="number" id="quantity-${index}" name="quantity" min="1" value="${product.quantity}" onchange="updateQuantity(${index}, this.value)" />
+          <p>Subtotal: $${(product.price * product.quantity).toLocaleString()}</p>
+          <div class="cart-item-actions">
+            <button class="btn-remove" data-index="${index}">Eliminar</button>
+            <button class="btn-summary" data-index="${index}" onclick="toggleSummary(${index})">Mostrar Resumen</button>
+          </div>
+
+          <div class="product-summary" id="summary-${index}" style="display: none;">
+            <p id="subtotal-${index}"></p>
+            <p id="taxes-${index}"></p>
+            <p id="shipping-${index}"></p>
+            <p id="grand-total-${index}"></p>
+          </div>
+        </div>
+      </div>
+    `;
+    cartItems.innerHTML += cartItem;
+    subtotal += product.price * product.quantity;
+  });
+
+  const removeButtons = document.querySelectorAll('.btn-remove');
+  removeButtons.forEach(button => {
+    button.addEventListener('click', removeProduct);
+  });
+    
+        cart.forEach((product, index) => {
+          const subtotalElement = document.getElementById(`subtotal-${index}`);
+          const taxesElement = document.getElementById(`taxes-${index}`);
+          const shippingElement = document.getElementById(`shipping-${index}`);
+          const grandTotalElement = document.getElementById(`grand-total-${index}`);
+    
+          const taxes = product.price * product.quantity * 0.10; 
+          const shipping = product.price * product.quantity > 100000 ? 0 : 10000; 
+          const grandTotal = (product.price * product.quantity) + taxes + shipping;
+    
+          subtotalElement.innerText = `Subtotal: $${(product.price * product.quantity).toLocaleString()}`;
+          taxesElement.innerText = `Impuestos (10%): $${taxes.toLocaleString()}`;
+          shippingElement.innerText = `Envío: $${shipping.toLocaleString()}`;
+          grandTotalElement.innerText = `Total: $${grandTotal.toLocaleString()}`;
+        });
+      }
+    
+      function removeProduct(event) {
+  const index = parseInt(event.target.dataset.index); 
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+  if (index >= 0 && index < cart.length) { 
+    const removedProduct = cart[index]; 
+    cart.splice(index, 1); 
+    localStorage.setItem('cart', JSON.stringify(cart)); 
+    displayCart();
+    
+    showConfirmationMessage(`El producto "${removedProduct.title}" ha sido eliminado del carrito.`);
+  } else {
+    console.error("Índice inválido para eliminar un producto.");
+  }
+}
+  function showConfirmationMessage(message) {
+  const confirmationDiv = document.createElement("div");
+  confirmationDiv.textContent = message;
+  confirmationDiv.className = "confirmation-message";
+
+  document.body.appendChild(confirmationDiv);
+
+  setTimeout(() => {
+    confirmationDiv.remove();
+  }, 3000);
+}
+
+
+      function updateQuantity(index, newQuantity) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart[index].quantity = parseInt(newQuantity);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCart(); 
+      }
+    
+      function toggleSummary(index) {
+        const summary = document.getElementById(`summary-${index}`);
+        const button = document.querySelectorAll('.btn-summary')[index];
+    
+        if (summary.style.display === 'none') {
+          summary.style.display = 'block';
+          button.innerText = 'Ocultar Resumen';
+        } else {
+          summary.style.display = 'none';
+          button.innerText = 'Mostrar Resumen';
+        }
+        
+      }
+
+      window.onload = displayCart;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D1E8F3; /* Azul claro */
+    color: #333; /* Texto oscuro para contraste */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #A3D0F7; /* Azul más intenso */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    background-color: #A9D1F3; /* Azul claro */
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: #D1E8F3; /* Azul pastel suave al pasar el cursor */
+}
+
+/* Estilo del enlace como botón circular */
+.circular-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: #f4f4f4; /* Fondo del botón */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para efecto 3D */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .circular-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen dentro del círculo */
+  }
+  
+  .circular-button:hover {
+    transform: scale(1.1); /* Efecto de hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
+  }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #A3D0F7; /* Azul más intenso en el borde de la imagen */
+}
+
+.product h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #A3D0F7; /* Azul más intenso */
+}
+
+.product p {
+    font-size: 1.1em;
+    color: #A9D1F3; /* Azul claro */
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.3em;
+    color: #A3D0F7; /* Precio en azul más intenso */
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #A3D0F7; /* Azul más intenso */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.button:hover {
+    background-color: #D1E8F3; /* Azul suave en hover */
+}
+
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.back-btn a {
+    text-decoration: none;
+    color: #fff; /* Color de texto blanco */
+    background-color: #000; /* Fondo negro */
+    border: 2px solid #D1E8F3; /* Borde azul claro */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.back-btn a:hover {
+    background-color: #D1E8F3; /* Cambio de fondo al pasar el ratón */
+    color: #A3D0F7; /* Cambio de color de texto al pasar el ratón */
+}
+
+footer {
+    background-color: #A3D0F7; /* Azul más intenso */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    text-align: center;
+}

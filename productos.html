@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="icon" href="img/s.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanrio Star ✩</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="circular-button">
+        <img src="img/j.webp" alt="Botón circular">
+    </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="productos.html">Productos</a></li>
+        </ul>
+      </nav>
+      <form class="search-bar" action="#" method="GET">
+        <input type="text" name="q" placeholder="Buscar productos..." />
+  <button type="submit">🔍</button>
+      </nav> 
+      <div class="actions">
+      
+        <a href="carrito.html" class="cart-button">
+            <i class="shopping cart icon"></i> Carrito 🛒
+        </a>
+      <div class="login">
+        <a href="inicosesion.html" class="btn">Iniciar sesión</a>
+      </div> </form>
+    </header>
+
+
+
+<section id="productos-nuevos" class="productos-nuevos">
+  <h2>Todos nuestros productos</h2>
+  <p>Busca entre nuestros productos tu favorto!</p>
+
+  <div class="productos-grid">
+    <div class="producto">
+      <img src="img/cina.jfif" alt="Producto 1">
+      <h3>Kitt de colegio Cinnamoroll</h3>
+      <p>$120.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+      
+      <button class="btn" onclick="addToCart({ 
+        id: 1, 
+        title: 'Kitt de colegio Cinnamoroll', 
+        price: 120000, 
+        image: 'img/cina.jfif',
+        description: 'Un práctico kit de útiles escolares inspirado en Cinnamoroll, ideal para el colegio o el trabajo.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/kuromi.jfif" alt="Producto 2">
+      <h3>Peluche de kuromi</h3>
+      <p>$30.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+
+      
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Peluche de kuromi', 
+        price: 30000, 
+        image: 'img/Kuromi.jfif',
+        description: 'Un hermoso peluche de un buen tamaño.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/funkokitty.jfif" alt="Producto 3">
+      <h3>Funkopop de Hello Kitty</h3>
+      <p>$35.000</p>
+      
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Funkopop de Hello Kitty', 
+        price: 35000, 
+        image: 'img/funkokitty.jfif',
+        description: 'Un hermoso Funkopop de un buen precio.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/pochaco.jfif" alt="Producto 4">
+      <h3>Porta carnet de Pochaco</h3>
+      <p>$18.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+      
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Funkopop de Hello Kitty', 
+        price: 18000, 
+        image: 'img/pochaco.jfif',
+        description: 'Un hermoso Funkopop de un buen precio.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/esponjas.jpg" alt="Producto 5">
+      <h3>Esponjas</h3>
+      <p>$10.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+      
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Esponjas', 
+        price: 10000, 
+        image: 'img/esponjas.jpg',
+        description: 'Esponjas.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/lapiceros.jfif" alt="Producto 6">
+      <h3>Lapiceros</h3>
+      <p>$5.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+
+      
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Lapiceros', 
+        price: 5000, 
+        image: 'img/lapiceros.jfif',
+        description: 'Lapiceros.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/cubiertos.jpg" alt="Producto 7">
+      <h3>Cubiertos</h3>
+      <p>$20.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+
+      
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Cubiertos', 
+        price: 20000, 
+        image: 'img/Cubiertos.jpg',
+        description: 'Cubiertos.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/pomMONEDERO.jpg" alt="Producto 8">
+      <h3>Monedero de Pompompurim</h3>
+      <p>$12.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+
+      
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Monedero de Pompompurim', 
+        price: 20000, 
+        image: 'img/pomMONEDERO.jpg',
+        description: 'Monedero de Pompompurim.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/chulos.jpg" alt="Producto 9">
+      <h3>Chulos para el cabello</h3>
+      <p>$5.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+      
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Chulos', 
+        price: 5000, 
+        image: 'img/chulos.jpg',
+        description: 'Cubiertos.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/tostadora.jpg" alt="Producto 10">
+      <h3>Tostadora de Hello kitty</h3>
+      <p>$60.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+      
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Tostadora de Hello kitty', 
+        price: 60000, 
+        image: 'img/tostadora.jpg',
+        description: 'Tostadora de Hello kitty.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/JABONERAkuromi.jpg" alt="Producto 11">
+      <h3>Jabonera de Kuromi</h3>
+      <p>$12.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+      
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Jabonera de Kuromi', 
+        price: 12000, 
+        image: 'img/JABONERAkuromi.jpg',
+        description: 'Jabonera de Kuromi.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/melodyTERMO.jpg" alt="Producto 12">
+      <h3>Termo de My Melody</h3>
+      <p>$22.000</p>
+      <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+
+      <button class="btn" onclick="addToCart({ 
+        id: 2, 
+        title: 'Termo de My Melody', 
+        price: 20000, 
+        image: 'img/melodyTERMO.jpg',
+        description: 'Termo de My Melody.',
+        quantity: document.getElementById('quantity-1').value  
+      })">Agregar al carrito</button>
+    </div>
+ 
+
+  <div class="producto">
+    <img src="img/cinaCHANCLAS.jpg" alt="Producto 13">
+    <h3>Chanclas de Cinnamoroll</h3>
+    <p>$18.000</p>
+    <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+    
+    <button class="btn" onclick="addToCart({ 
+      id: 2, 
+      title: 'Chanclas de Cinnamoroll', 
+      price: 18000, 
+      image: 'img/cinaCHANCLAS.jpg',
+      description: 'Chanclas de Cinnamoroll.',
+      quantity: document.getElementById('quantity-1').value  
+    })">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="img/keLONCHERA.jpg" alt="Producto 14">
+    <h3>Lonchera de keroppi</h3>
+    <p>$45.000</p>
+    <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+    
+    <button class="btn" onclick="addToCart({ 
+      id: 2, 
+      title: 'Lonchera de keroppi', 
+      price: 45000, 
+      image: 'img/keLONCHERA.jpg',
+      description: 'Lonchera de keroppi.',
+      quantity: document.getElementById('quantity-1').value  
+    })">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="img/paxTAZA.jpg" alt="Producto 15">
+    <h3>Taza de PaxMaru</h3>
+    <p>$30.000</p>
+    <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+    
+    <button class="btn" onclick="addToCart({ 
+      id: 2, 
+      title: 'Taza de PaxMaru', 
+      price: 30000, 
+      image: 'img/paxTAZA.jpg',
+      description: 'Taza de PaxMaru.',
+      quantity: document.getElementById('quantity-1').value  
+    })">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="img/poESTUCHECAMARA.jpg" alt="Producto 16">
+    <h3>Estuche de cámara de Pochacco</h3>
+    <p>$30.000</p>
+    <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+    
+    <button class="btn" onclick="addToCart({ 
+      id: 2, 
+      title: 'Estuche de cámara de Pochacco', 
+      price: 30000, 
+      image: 'img/poESTUCHECAMARA.jpg',
+      description: 'Estuche de cámara de Pochacco.',
+      quantity: document.getElementById('quantity-1').value  
+    })">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="img/pomBOLSO.jpg" alt="Producto 17">
+    <h3>Bolso de PomPomPurin</h3>
+    <p>$45.000</p>
+    <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+    
+    <button class="btn" onclick="addToCart({ 
+      id: 2, 
+      title: 'Bolso de PomPomPurin', 
+      price: 45000, 
+      image: 'img/pomBOLSO.jpg',
+      description: 'Bolso de PomPomPurin.',
+      quantity: document.getElementById('quantity-1').value  
+    })">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="img/meloRELOJ.jpg" alt="Producto 18">
+    <h3>Reloj de My Melody</h3>
+    <p>$30.000</p>
+    <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+    
+    <button class="btn" onclick="addToCart({ 
+      id: 2, 
+      title: 'Reloj de My Melody', 
+      price: 30000, 
+      image: 'img/meloRELOJ.jpg',
+      description: 'Reloj de My Melody.',
+      quantity: document.getElementById('quantity-1').value  
+    })">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="img/pomMONEDERO.jpg" alt="Producto 19">
+    <h3>Monedero de Pompompurin</h3>
+    <p>$12.000</p>
+    <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+    
+    <button class="btn" onclick="addToCart({ 
+      id: 2, 
+      title: 'Monedero de Pompompurin', 
+      price: 12000, 
+      image: 'img/pomMONEDERO.jpg',
+      description: 'Monedero de Pompompurin.',
+      quantity: document.getElementById('quantity-1').value  
+    })">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="img/kuPAPELERA.jpg" alt="Producto 20">
+    <h3>Papelera de Kuromi</h3>
+    <p>$15.000</p>
+    <label for="quantity-1">Cantidad:</label>
+      <input type="number" id="quantity-1" name="quantity" min="1" value="1" />
+      <pre></pre>
+    
+    <button class="btn" onclick="addToCart({ 
+      id: 2, 
+      title: 'Papelera de Kuromi', 
+      price: 15000, 
+      image: 'img/kuPAPELERA.jpg',
+      description: 'Papelera de Kuromi.',
+      quantity: document.getElementById('quantity-1').value  
+    })">Agregar al carrito</button>
+  </div>
+
+
+</div>
+</section>
+<script>
+ function addToCart(product) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  const productIndex = cart.findIndex(item => item.id === product.id);
+  if (productIndex > -1) {
+
+    cart[productIndex].quantity += parseInt(product.quantity);
+  } else {
+    product.quantity = parseInt(product.quantity);
+    cart.push(product);
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  showConfirmationMessage(`El producto "${product.title}" se ha agregado al carrito.`);
+}
+
+function showConfirmationMessage(message) {
+  const confirmationDiv = document.createElement("div");
+  confirmationDiv.textContent = message;
+  confirmationDiv.className = "confirmation-message";
+
+  document.body.appendChild(confirmationDiv);
+
+  setTimeout(() => {
+    confirmationDiv.remove();
+  }, 3000);
+
+}
+</script>
+</body>
+</html>
